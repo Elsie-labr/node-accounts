@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/account" method="post">
+        <div>
+            <label for="">事项：</label>
+            <input type="text" name="title">
+        </div>
+        <div>
+            <label for="">时间：</label>
+            <input type="date" name="time">
+        </div>
+        <div>
+            <label for="">类型：</label>
+            <select name="type" id="type">
+                <option value="-1">支出</option>
+                <option value="1">收入</option>
+            </select>
+        </div>
+        <div>
+            <label for="">金额：</label>
+            <textarea id="remarks" name="account"></textarea>
+        </div>
+        <button type="submit">添加</button>
+    </form>
+</body>
+
+</html>

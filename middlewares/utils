@@ -1,0 +1,8 @@
+// 声明中间件，检测登录状态
+module.exports = (req, res, next) => {
+  // 判断session
+  if (!req.session.username) {
+    return res.redirect('/login')
+  }
+  next()
+}

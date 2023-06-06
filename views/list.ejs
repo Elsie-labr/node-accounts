@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="/account/create"><button>去添加</button></a>
+    <a href="/logout">退出登录</a>
+    <h1>我是列表页面</h1>
+    <div>
+        <% account.forEach(item => {%>
+        <div>
+            <label for="">事项：</label><span><%= item.title %></span><br>
+            <label for="">时间：</label><span><%= moment(item.time).format('YYYY-MM-DD') %></span><br>
+            <label for="">类型：</label><span><%= item.type === -1 ? '支出' : '收入' %></span><br>
+            <label for="">金额：</label><span><%= item.account %></span><br>
+            <a href="/account/<%= item._id %>"><button>点我删除</button></a>
+
+            <hr>
+        </div>
+        <% })%>
+    </div>
+</body>
+
+</html>
